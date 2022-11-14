@@ -33,38 +33,29 @@ namespace QuestOfElysiumDemo
 
         static void Main(string[] args)
         {
-            RepeatChar('a', 1);
-            RepeatChar('a', 5);
-            RepeatChar('a', 10);
-
-            Console.ReadKey(true);
-
             DisplayMap();
 
             Console.ReadKey(true);
 
-
-            DisplayMap(2);
-        }
-
-        //EXAMPLE
-        static void RepeatChar(char character, int Scale)
-        {
-            for (int count = 0; count < Scale; count++) // count = 0..Times-1
-            {
-                Console.Write(character);
-            }
-            
-            Console.WriteLine();
         }
 
         static void DisplayMap()
         {
+            for (int x = 0; x < map.GetLength(0); x++)
+            {
+                for (int y = 0; y < map.GetLength(1); y++)
+                {
+                    Console.Write(map[x, y]);
+                }
+                // After y
+                Console.WriteLine(" ");
+            }
+            // AFter X
 
         }
-        static void DisplayMap(int scale)
-        {
+        //static void DisplayMap(int scale)
+        //{
           
-        }
+        //}
     }
 }
