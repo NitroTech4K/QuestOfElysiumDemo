@@ -60,7 +60,7 @@ namespace QuestOfElysiumDemo
 
         static void DisplayMap()
         {
-          
+
         }
         static void DisplayMap(int scale)
         {
