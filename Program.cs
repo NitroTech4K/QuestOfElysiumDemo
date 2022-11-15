@@ -33,10 +33,19 @@ namespace QuestOfElysiumDemo
 
         static void Main(string[] args)
         {
-            DisplayMap();
+            DisplayMap(5);
+            Repeat(3, 'w');
 
             Console.ReadKey(true);
 
+        }
+
+        static void Repeat(int count, char character)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Console.Write(character);
+            }
         }
 
         static void DisplayMap()
@@ -55,7 +64,24 @@ namespace QuestOfElysiumDemo
         }
         //static void DisplayMap(int scale)
         //{
-          
+
         //}
+        static void DisplayMap(int scale)   //scale is 5
+        {
+            for (int ScaleX = 0; ScaleX < scale; ScaleX++)
+            {
+                for (int y = 0; y < map.GetLength(1); y++)  //do the below for every character in a row
+                {
+                    for (int ScaleY = 0; ScaleY < scale; ScaleY++)  //do the below 5 times
+                    {
+                        Console.Write(map[ScaleX, y]);  //write one character
+                    }
+                }
+                // After y
+                Console.WriteLine(" ");
+            }
+            // AFter X
+        }
+
     }
 }
