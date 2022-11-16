@@ -34,6 +34,7 @@ namespace QuestOfElysiumDemo
         static void Main(string[] args)
         {
             DisplayMap();
+            Console.WriteLine("");
             DisplayMap(5);
             
 
@@ -53,17 +54,42 @@ namespace QuestOfElysiumDemo
 
         static void DisplayMap()
         {
-            for (int x = 0; x < map.GetLength(0); x++)
-            {
-                for (int y = 0; y < map.GetLength(1); y++)
-                {
-                    Console.Write(map[x, y]);
-                }
-                // After y
-                Console.WriteLine(" ");
-            }
-            // AFter X
+            Console.Write("╔");
 
+            for (int BoarderTop = 0; BoarderTop < map.GetLength(1); BoarderTop++)
+            {
+                Console.Write("-");
+            }
+                Console.Write("╗");
+                Console.WriteLine("");
+
+
+            for (int y = 0; y < map.GetLength(0); y++)
+            {
+                Console.Write("|");
+
+                for (int x = 0; x < map.GetLength(1); x++)
+                {
+                    
+                    Console.Write(map[y, x]);
+                }
+                // After x
+
+                Console.Write("|");
+                Console.WriteLine(" ");
+
+                
+            }
+            // AFter y
+
+                Console.Write("╚");
+
+            for (int BoarderBottom = 0; BoarderBottom < map.GetLength(1); BoarderBottom++)
+            {
+                Console.Write("-");
+            }
+                Console.Write("╝");
+                Console.WriteLine("");
         }
         //static void DisplayMap(int scale)
         //{
@@ -71,24 +97,43 @@ namespace QuestOfElysiumDemo
         //}
         static void DisplayMap(int scale)   //scale is 5
         {
-            for (int x = 0; x < map.GetLength(0); x++)  //do the below for every row in the map
+            Console.Write("╔");
+
+            for (int BoarderTop = 0; BoarderTop < map.GetLength(1) * scale; BoarderTop++)
             {
-                for (int ScaleX = 0; ScaleX < scale; ScaleX++) //do the below twice
+                Console.Write("-");
+            }
+                Console.Write("╗");
+                Console.WriteLine("");
+            for (int y = 0; y < map.GetLength(0); y++)  //do the below for every row in the map
+            {
+                for (int ScaleY = 0; ScaleY < scale; ScaleY++) //do the below twice
                 {
-                    for (int y = 0; y < map.GetLength(1); y++)  //do the below for every character in a row
+                    Console.Write("|"); 
+
+                    for (int x = 0; x < map.GetLength(1); x++)  //do the below for every character in a row
                     {
-                        for (int ScaleY = 0; ScaleY < scale; ScaleY++)  //do the below twice
+                        for (int ScaleX = 0; ScaleX < scale; ScaleX++)  //do the below twice
                         {
-                            Console.Write(map[x, y]);  //write one character
+                            Console.Write(map[y, x]);  //write one character
                         }
                     }
-
+                    Console.Write("|");
                     Console.WriteLine(" ");
                 }
-                    
-                // After y
+
+                // After X
             }
-            // AFter X
+
+            Console.Write("╚");
+
+            for (int BoarderBottom = 0; BoarderBottom < map.GetLength(1) * scale; BoarderBottom++)
+            {
+                Console.Write("-");
+            }
+            Console.Write("╝");
+            Console.WriteLine("");
+            // After Y
         }
 
     }
