@@ -70,7 +70,7 @@ namespace QuestOfElysiumDemo
 
             for (int BoarderTop = 0; BoarderTop < map.GetLength(1); BoarderTop++)
             {
-                Console.Write("-");
+                Console.Write("═");
             }
                 Console.Write("╗");
                 Console.WriteLine("");
@@ -78,7 +78,7 @@ namespace QuestOfElysiumDemo
 
             for (int y = 0; y < map.GetLength(0); y++)
             {
-                Console.Write("|");
+                Console.Write("║");
 
                 for (int x = 0; x < map.GetLength(1); x++)
                 {
@@ -87,7 +87,7 @@ namespace QuestOfElysiumDemo
                 }
                 // After x
 
-                Console.Write("|");
+                Console.Write("║");
                 Console.WriteLine(" ");
 
                 
@@ -98,7 +98,7 @@ namespace QuestOfElysiumDemo
 
             for (int BoarderBottom = 0; BoarderBottom < map.GetLength(1); BoarderBottom++)
             {
-                Console.Write("-");
+                Console.Write("═");
             }
                 Console.Write("╝");
                 Console.WriteLine("");
@@ -114,7 +114,7 @@ namespace QuestOfElysiumDemo
 
             for (int BoarderTop = 0; BoarderTop < map.GetLength(1) * scale; BoarderTop++)
             {
-                Console.Write("-");
+                Console.Write("═");
             }
                 Console.Write("╗");
                 Console.WriteLine("");
@@ -122,7 +122,7 @@ namespace QuestOfElysiumDemo
             {
                 for (int ScaleY = 0; ScaleY < scale; ScaleY++) //do the below twice
                 {
-                    Console.Write("|"); 
+                    Console.Write("║"); 
 
                     for (int x = 0; x < map.GetLength(1); x++)  //do the below for every character in a row
                     {
@@ -131,7 +131,7 @@ namespace QuestOfElysiumDemo
                             Console.Write(map[y, x]);  //write one character
                         }
                     }
-                    Console.Write("|");
+                    Console.Write("║");
                     Console.WriteLine(" ");
                 }
 
@@ -142,7 +142,7 @@ namespace QuestOfElysiumDemo
 
             for (int BoarderBottom = 0; BoarderBottom < map.GetLength(1) * scale; BoarderBottom++)
             {
-                Console.Write("-");
+                Console.Write("═");
             }
             Console.Write("╝");
             Console.WriteLine("");
