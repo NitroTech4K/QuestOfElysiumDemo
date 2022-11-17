@@ -66,6 +66,11 @@ namespace QuestOfElysiumDemo
 
         static void DisplayMap()
         {
+
+
+            Console.WriteLine("This is the map at normal values.");
+            Console.WriteLine();
+            Console.WriteLine();
             Console.Write("╔");
 
             for (int BoarderTop = 0; BoarderTop < map.GetLength(1); BoarderTop++)
@@ -110,6 +115,11 @@ namespace QuestOfElysiumDemo
 
         static void DisplayMap(int scale)   //scale is 5
         {
+
+            Console.WriteLine("This is the map at a scale value of " + scale + ".");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
             Console.Write("╔");
 
             for (int BoarderTop = 0; BoarderTop < map.GetLength(1) * scale; BoarderTop++)
