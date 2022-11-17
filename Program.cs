@@ -29,8 +29,16 @@ namespace QuestOfElysiumDemo
         static void Main(string[] args)
         {
             DisplayMap();
-            Console.WriteLine("");
+          
+            DisplayMap(2);
+
+            DisplayMap(3);
+
+            DisplayMap(4);
+
             DisplayMap(5);
+
+            DisplayMap(6);
             
 
             Console.ReadKey(true);
