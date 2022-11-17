@@ -25,11 +25,6 @@ namespace QuestOfElysiumDemo
         };
 
 
-        // map legend:
-        // ^ = mountain
-        // ` = grass
-        // ~ = water
-        // * = trees
 
         static void Main(string[] args)
         {
@@ -43,6 +38,23 @@ namespace QuestOfElysiumDemo
         }
 
         //Matt's Example
+
+        static void DisplayLegend()
+        {
+            Console.WriteLine("╔═══════════════╗");
+            Console.WriteLine("║  map legend   ║  ");
+            Console.WriteLine("║═══════════════║  ");
+            Console.WriteLine("║  ^ = mountain ║ "); 
+            Console.WriteLine("║  ` = grass    ║ "); 
+            Console.WriteLine("║  ~ = water    ║ ");
+            Console.WriteLine("║  * = trees    ║ ");
+            Console.WriteLine("╚═══════════════╝");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
 
         // static void Repeat(int count, char character)
         // {
@@ -90,11 +102,12 @@ namespace QuestOfElysiumDemo
             }
                 Console.Write("╝");
                 Console.WriteLine("");
-        }
-        //static void DisplayMap(int scale)
-        //{
 
-        //}
+            DisplayLegend();
+        }
+        
+
+
         static void DisplayMap(int scale)   //scale is 5
         {
             Console.Write("╔");
@@ -134,6 +147,8 @@ namespace QuestOfElysiumDemo
             Console.Write("╝");
             Console.WriteLine("");
             // After Y
+
+            DisplayLegend();
         }
 
     }
